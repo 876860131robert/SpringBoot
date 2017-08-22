@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.robert.dao.LoginDao">
+<resultMap id="advertDataMap" type="com.robert.model.AdvertModel">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="ad_id" property="ad_id" jdbcType="INTEGER"  />
+		<result column="date" property="date" jdbcType="VARCHAR"  />
+		<result column="viewCount" property="viewCount" jdbcType="INTEGER"  />
+		<result column="clickCount" property="clickCount" jdbcType="INTEGER" />
+		<result column="lastViewDateTime" property="lastViewDateTime" jdbcType="VARCHAR" />
+		<result column="lastClickDateTime" property="lastClickDateTime" jdbcType="VARCHAR"  />
+	</resultMap>
+	<!-- 新增物料信息-->
+	<insert id="save">
+		insert into daliycount(<trim suffixOverrides=",">
+		     ad_id,date,viewCount,clickCount,lastViewDateTime,lastClickDateTime,
+            </trim>)values(<trim suffixOverrides=",">
+            #{ad_id},#{date},#{viewCount},#{clickCount},#{lastViewDateTime},#{lastClickDateTime},
+            </trim>)
+	</insert>
+
+</mapper> 
