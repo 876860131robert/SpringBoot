@@ -26,7 +26,7 @@ public class CommonController {
 	/**
 	 * 根据key获取slightServerURL.propertise文件中的值
 	 * @param tag
-	 * @return fanguizhi z ss
+	 * @return fanguizhi rtrtrtrt
 	 */
 	@RequestMapping("/findPropertiseVal")
 	public void findPropertiseVal(HttpServletRequest request, HttpServletResponse response){
